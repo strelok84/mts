@@ -1,3 +1,7 @@
+import React from 'react';
+import nagiev from "../img/nagiev_short.png"
+import logo from "../img/MTS_Logo_rus_r.png"
+
 function Header() {
   return (
     <div className="header_wrapper">
@@ -10,7 +14,7 @@ function Header() {
       <div className="header_middle">
         <div className="header_middle_center">
           <div className="logo">
-            <img src="/img/MTS_Logo_rus_r.png"></img>
+            <img src={logo}></img>
           </div>
           <div className="connection">Связь+интернет+ТВ</div>
           <div className="internetTV">Интернет+ТВ</div>
@@ -56,7 +60,7 @@ function Header() {
           </div>
           <h2 className="heading">Встречайте НЕТАРИФ</h2>
           <div className="link">Подробнее</div>
-          <img src="/img/nagiev_short.png" className="nagiev"></img>
+          <img src={nagiev} className="nagiev"></img>
           <div className="mts_line"></div>
         </div>
       </div>
