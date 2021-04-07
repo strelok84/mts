@@ -1,38 +1,272 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "MTSSans";
+  src: local("MTSSans"), url(./fonts/MTSSans-Regular.otf) format("opentype");
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  font-family: MTSSans, Arial, sans-serif;
+}
+.header_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 3rem 5rem 24rem;
+  grid-column: 1/13;
+}
+/* Верхняя серая полоса */
+.header_top {
+  background-color: #58595b;
+  margin: auto;
+  grid-column: 1/13;
+  grid-row: 1/2;
+  width: 100%;
+}
+.header_top-center {
+  max-width: 1140px;
+  height: 3rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr;
+}
+.support {
+  grid-column: 0/1;
+  color: #fff;
+  padding-left: 1rem;
+  align-self: center;
+  justify-self: center;
+}
+.city {
+  grid-column: 3/4;
+  color: #fff;
+  padding-right: 1rem;
+  align-self: center;
+  justify-self: center;
+}
+/* Полоса с меню-гамбургером */
+
+/*Меню-гамбургер*/
+.hamburger-menu{
+  display:none;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#menu__toggle {
+  display:none;
+  opacity: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+  background-color: #fff;
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+  background-color: #fff;
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  transition:visibility 0.3s linear,opacity 0.3s linear;
+  left: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menu__btn {
+  
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; 
+  position: relative;
+  top:30%;
+  left: 30%;
+  width: 2rem;
+  height: 2rem;
+
+  cursor: pointer;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: .1rem;
+
+  background-color: #58595B;
+
+  transition-duration: .5s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: -10px;
+  bottom: -100%;
+
+  width: 100%;
+  height: 30%;
+
+  margin: 0;
+  padding: 10rem 0;
+
+  list-style: none;
+
+  background-color: #58595B;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-timing-function:ease-in;
+  transition-duration: .5s;
+}
+
+.menu__item {
+  display: block;
+  padding: 1rem 2rem;
+
+  color: #fff;
+
+  
+  font-size: 1rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .5s;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+
+
+@media screen and (max-device-width: 1024px) {
+  .hamburger-menu{
+   
+    display: block;
+    grid-column:1/2;
+    grid-row:1/2;
   }
-  to {
-    transform: rotate(360deg);
+  .logo{
+    grid-column:2/3;
   }
+  .connection,
+  .internetTV,
+  .internet,
+  .digitalTV,
+  .connect {
+    display: none;
+  }
+}
+.header_middle {
+  background-color: #fff;
+  grid-row: 2/3;
+  grid-column: 1/13;
+  width: 100%;
+}
+
+.header_middle_center {
+  max-width: 1140px;
+  height: 5rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+}
+.logo {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+}
+.logo img {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+}
+.connect {
+  
+}
+.connection,
+.internetTV,
+.internet,
+.digitalTV,
+.connect {
+  align-self: center;
+  justify-self: center;
+}
+/* Полоса с фото */
+.header_bottom {
+  background-color: #000;
+  grid-row: 3/4;
+  grid-column: 1/13;
+  width: 100%;
+}
+
+.header_bottom_center {
+  max-width: 1140px;
+  height: 24rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  color: #fff;
+}
+
+.nagiev {
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+
+@media screen and (max-device-width: 1024px) {
+  .nagiev {
+    display: none;
+  }
+  .header_bottom_center {
+    grid-template-columns: 1fr;
+  }
+  .subscription,.heading,.link{
+    text-align: center;
+  }
+  
+}
+.mts_line {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  background-image: url(./img/MTS_Comm_Hor_Rus_Red_Grad.png);
+  background-size: cover;
+  background-position: right center;
+}
+
+.subscription {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: start;
+  align-self: center;
+}
+.heading {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: start;
+  align-self: center;
+}
+.link {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-self: start;
+  align-self: center;
 }
