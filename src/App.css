@@ -5,7 +5,7 @@
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-
+  
   font-family: MTSSans, Arial, sans-serif;
 }
 .header_wrapper {
@@ -198,9 +198,7 @@
   justify-self: center;
   width: 100%;
 }
-.connect {
-  
-}
+
 .connection,
 .internetTV,
 .internet,
@@ -269,4 +267,30 @@
   grid-row: 3/4;
   justify-self: start;
   align-self: center;
+}
+
+/* Main */
+.main_wrapper{
+  grid-column:1/13;
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  
+}
+
+.address{
+  grid-column:3/11;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2rem 1fr;
+}
+.details{
+  grid-row:2/3;
+}
+
+#address{
+  grid-row: 1/2;
+}
+
+summary{
+  display: none;
 }
