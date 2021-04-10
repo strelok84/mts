@@ -2,7 +2,9 @@ import React from 'react';
 import nagiev from "../img/nagiev_short.png"
 import logo from "../img/MTS_Logo_rus_r.png"
 
-function Header() {
+class Header extends React.Component {
+
+  render(){
   return (
     <div className="header_wrapper">
       <div className="header_top">
@@ -24,7 +26,7 @@ function Header() {
 
           <div className="hamburger-menu">
             <input id="menu__toggle" type="checkbox" />
-            <label className="menu__btn" for="menu__toggle">
+            <label className="menu__btn" htmlFor="menu__toggle">
               <span></span>
             </label>
             <ul className="menu__box">
@@ -65,7 +67,8 @@ function Header() {
         </div>
       </div>
     </div>
-  );
+  )
+  }
 }
 
 export default Header;

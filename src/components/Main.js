@@ -1,4 +1,5 @@
 import React from "react";
+import Block from "./Block";
 
 class Main extends React.Component {
   state = {
@@ -36,36 +37,62 @@ class Main extends React.Component {
       address: event.target.value,
     }));
     this.componentDidMount();
-    const details = document.querySelector('details')
-    details.open=true;
+    const details = document.querySelector("details");
+    const ad1 = details.children[1];
+    details.open = true;
+   
   };
-  chosenName=(event)=>{
-      const address =document.getElementById("address")
-      address.value=event.target.innerHTML
-      const details = document.querySelector('details')
-      details.open=false;
-      
-  }
+  chosenName = (event) => {
+    const address = document.getElementById("input");
+    address.value = event.target.innerHTML;
+    const details = document.querySelector("details");
+    details.open = false;
+    
+  };
 
   render() {
     return (
       <div className="main_wrapper">
         <div className="address">
+          <label htmlFor="address">Проверьте подключение Вашего дома к сети МТС</label>
           <input
-            id="address"
+            id="input"
             name="address"
             type="text"
             onChange={this.searchName}
           />
           <details className="details">
             <summary></summary>
-            <div onClick={this.chosenName}>{this.state.data[0] ? this.state.data[0].value : "Неизвестный адрес"}</div>
-            <div onClick={this.chosenName}>{this.state.data[1] ? this.state.data[1].value : "Неизвестный адрес"}</div>
-            <div onClick={this.chosenName}>{this.state.data[2] ? this.state.data[2].value : "Неизвестный адрес"}</div>
-            <div onClick={this.chosenName}>{this.state.data[3] ? this.state.data[3].value : "Неизвестный адрес"}</div>
-            <div onClick={this.chosenName}>{this.state.data[4] ? this.state.data[4].value : "Неизвестный адрес"}</div>
+            <select multiple size="5" className="select" >
+            <option onClick={this.chosenName} tabIndex={1}>
+              {this.state.data[0]
+                ? this.state.data[0].value
+                : "Неизвестный адрес"}
+            </option>
+            <option onClick={this.chosenName} tabIndex={2}>
+              {this.state.data[1]
+                ? this.state.data[1].value
+                : ""}
+            </option>
+            <option onClick={this.chosenName} tabIndex={3}>
+              {this.state.data[2]
+                ? this.state.data[2].value
+                : ""}
+            </option>
+            <option onClick={this.chosenName} tabIndex={4}>
+              {this.state.data[3]
+                ? this.state.data[3].value
+                : ""}
+            </option>
+            <option onClick={this.chosenName} tabIndex={5}>
+              {this.state.data[4]
+                ? this.state.data[4].value
+                : ""}
+            </option>
+            </select>
           </details>
         </div>
+        <Block id="block_1"/>
       </div>
     );
   }

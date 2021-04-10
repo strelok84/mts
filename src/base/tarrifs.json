@@ -1,0 +1,76 @@
+[
+  { 
+    "name": "Весь МТС Супер",
+    "speed": 100,
+    "cost": 680,
+    "connect_cost":0,
+    "quantity_TV_channels":186,
+    "quantity_minutes":1200,
+    "quantity_Gb":0,
+    "quantity_SMS":0,
+    "router":{"availability":true},
+    "console":{"availability":true}
+
+
+  },
+  {
+    "name": "Весь МТС Про",
+    "speed": 500,
+    "cost": 720,
+    "connect_cost":0,
+    "quantity_TV_channels":186,
+    "quantity_minutes":1500,
+    "quantity_Gb":0,
+    "quantity_SMS":0,
+    "router":{"availability":true},
+    "console":{"availability":true}
+  },
+  {
+    "name": "Весь МТС Про",
+    "speed": 500,
+    "cost": 720,
+    "connect_cost":0,
+    "quantity_TV_channels":186,
+    "quantity_minutes":1500,
+    "quantity_Gb":0,
+    "quantity_SMS":0,
+    "router":{"availability":true},
+    "console":{"availability":true}
+  },
+  {
+    "name": "Весь МТС Про",
+    "speed": 500,
+    "cost": 720,
+    "connect_cost":0,
+    "quantity_TV_channels":186,
+    "quantity_minutes":1500,
+    "quantity_Gb":0,
+    "quantity_SMS":0,
+    "router":{"availability":true},
+    "console":{"availability":true}
+  },
+  {
+    "name": "Весь МТС Про",
+    "speed": 500,
+    "cost": 720,
+    "connect_cost":0,
+    "quantity_TV_channels":186,
+    "quantity_minutes":1500,
+    "quantity_Gb":0,
+    "quantity_SMS":0,
+    "router":{"availability":true},
+    "console":{"availability":true}
+  },
+  {
+    "name": "Весь МТС Про",
+    "speed": 500,
+    "cost": 720,
+    "connect_cost":0,
+    "quantity_TV_channels":186,
+    "quantity_minutes":1500,
+    "quantity_Gb":0,
+    "quantity_SMS":0,
+    "router":{"availability":true},
+    "console":{"availability":true}
+  }
+]
