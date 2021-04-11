@@ -294,7 +294,7 @@
 }
 .select{
   grid-column:1/2;
-  
+  list-style-type: none;
   appearance: none;
   
   background-color: transparent;

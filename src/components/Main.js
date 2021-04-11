@@ -63,33 +63,33 @@ class Main extends React.Component {
           />
           <details className="details">
             <summary></summary>
-            <select multiple size="5" className="select" >
-            <option onClick={this.chosenName} tabIndex={1}>
+            <ul multiple size="5" className="select" >
+            <li onClick={this.chosenName} tabIndex={1}>
               {this.state.data[0]
                 ? this.state.data[0].value
                 : "Неизвестный адрес"}
-            </option>
-            <option onClick={this.chosenName} tabIndex={2}>
+            </li>
+            <li onClick={this.chosenName} tabIndex={2}>
               {this.state.data[1]
                 ? this.state.data[1].value
                 : ""}
-            </option>
-            <option onClick={this.chosenName} tabIndex={3}>
+            </li>
+            <li onClick={this.chosenName} tabIndex={3}>
               {this.state.data[2]
                 ? this.state.data[2].value
                 : ""}
-            </option>
-            <option onClick={this.chosenName} tabIndex={4}>
+            </li>
+            <li onClick={this.chosenName} tabIndex={4}>
               {this.state.data[3]
                 ? this.state.data[3].value
                 : ""}
-            </option>
-            <option onClick={this.chosenName} tabIndex={5}>
+            </li>
+            <li onClick={this.chosenName} tabIndex={5}>
               {this.state.data[4]
                 ? this.state.data[4].value
                 : ""}
-            </option>
-            </select>
+            </li>
+            </ul>
           </details>
         </div>
         <Block id="block_1"/>
