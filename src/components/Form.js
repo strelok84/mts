@@ -70,6 +70,10 @@ class Form extends React.Component {
     details.style.gridRow="3/4" */
   };
 
+  submit=(event)=>{
+    event.preventDefault();
+  }
+
   render() {
     return (
       <form className="form">
@@ -103,7 +107,7 @@ class Form extends React.Component {
               : "Неизвестный адрес"}
           </div>
         </details>
-        <input type="submit" className="submit"></input>
+        <input type="submit" className="submit" onSubmit={this.submit}></input>
       </form>
     );
   }
