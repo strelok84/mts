@@ -16,7 +16,7 @@
 }
 /* Верхняя серая полоса */
 .header_top {
-  background-color: #58595b;
+  background-color: #ADAFAF;
   margin: auto;
   grid-column: 1/13;
   grid-row: 1/2;
@@ -32,14 +32,14 @@
 }
 .support {
   grid-column: 0/1;
-  color: #fff;
+  color: #000;
   padding-left: 1rem;
   align-self: center;
   justify-self: center;
 }
 .city {
   grid-column: 3/4;
-  color: #fff;
+  color: #000;
   padding-right: 1rem;
   align-self: center;
   justify-self: center;
@@ -207,8 +207,8 @@
   grid-row: 3/4;
   grid-column: 1/13;
   width: 100%;
-  box-shadow: 0 3rem 3rem 1rem #000;
-  z-index: 1;
+ /*  box-shadow: 0 3rem 3rem 1rem #000;
+  z-index: 1; */
 }
 
 .header_bottom_center {
@@ -274,10 +274,10 @@
   grid-column: 1/13;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 30rem 2fr 20rem;
-  background-color: #f2f3f7;
-  background-image: url(./img/DSC_2804.JPG);
-  background-size: cover;
+  grid-template-rows: 30rem 2fr 30rem;
+  background-color: #ADAFAF;
+  /* background-image: url(./img/DSC_2804.JPG);
+  background-size: cover; */
 }
 
 .address {
@@ -445,6 +445,60 @@ summary {
 
 .form{
   grid-row: 3/4;
-  grid-column:2/12;
+  grid-column:4/10;
   margin-top:2rem;
+  background-color: #fff;
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(12,2rem);
+  grid-gap:.5rem;
+  border-radius: 1%;
+}
+@media screen and (max-device-width: 1024px) {
+  .form {
+    grid-column: 2/12;
+  }
+}
+
+.form_head{
+  grid-row:2/3;
+  grid-column:2/12;
+  text-align: center;
+}
+.flat{
+  grid-row:3/4;
+  grid-column:2/12;
+  
+}
+.house{
+  grid-row:4/5;
+  grid-column:2/12;
+}
+.sername{
+  grid-row:6/7;
+  grid-column:2/5;
+}
+.client_name{
+  grid-row:6/7;
+  grid-column:5/8;
+}
+.father_name{
+  grid-row:6/7;
+  grid-column:8/12;
+}
+.phone{
+  grid-row: 8/9;
+  grid-column:2/12;
+}
+.client_address{
+  grid-row:9/10;
+  grid-column:2/12;
+}
+.submit{
+  grid-row:11/12;
+  grid-column:2/12;
+}
+.form_address{
+  grid-row:10/11;
+  grid-column:2/12;
 }
